@@ -46,20 +46,20 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
   }));
 
   return (
-    <header className='absolute top-0 z-50 w-full bg-white dark:bg-black'>
-      <nav className='box-border flex h-[60px] items-center justify-between px-2 lg:mx-auto lg:max-w-[1024px] lg:px-4'>
+    <header className='= absolute top-0 z-50 w-full bg-white dark:bg-black'>
+      <nav className='mt-4 box-border flex h-[60px] items-center justify-between px-2 lg:mx-auto lg:max-w-screen-xl lg:px-4'>
         <Link to='/' className='flex items-center'>
           <img
             src={theme === 'dark' ? navLogoDark : navLogoLight}
             alt='logo'
-            width={48}
-            height={48}
+            width={60}
+            height={60}
           />
-          <span className='px-2 text-xl font-bold text-black dark:text-white max-lg:hidden'>
+          <span className='w-[4rem] px-2 text-xl font-bold text-black dark:text-white max-lg:hidden'>
             吾境設計
           </span>
         </Link>
-        <ul className='flex flex-1 items-center justify-end gap-12 max-lg:hidden'>
+        <ul className='flex h-full flex-1 items-end justify-end gap-12 px-3 max-lg:hidden'>
           {navLinks.map((link: { href: string; label: string }) => (
             <li
               key={link.label}
@@ -67,7 +67,7 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
             >
               <Link
                 to={link.href}
-                className='text-lg leading-normal text-black dark:text-white'
+                className='text-base leading-normal text-black dark:text-white'
               >
                 {link.label}
               </Link>
@@ -78,11 +78,11 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
               variant='ghost'
               size='icon'
               aria-label='Toggle Theme'
-              className='group mr-6 bg-transparent hover:bg-transparent'
+              className='group h-1 w-1 bg-transparent px-0 hover:bg-transparent'
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
               {theme === 'dark' ? (
-                <Moon className='absolute h-6 w-6 transition duration-300 ease-in-out group-hover:scale-110' />
+                <Moon className='absolute bottom-[0.125rem] h-6 w-6 transition duration-300 ease-in-out group-hover:scale-110' />
               ) : (
                 <Sun className='absolute h-6 w-6 text-black transition duration-300 ease-in-out group-hover:scale-110' />
               )}
@@ -218,7 +218,7 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
 
                 {/* right text */}
                 <div className='flex flex-1 justify-center'>
-                  <ToggleSwitch onSetOpenPanel={onSetOpenPanel} />
+                  <ToggleSwitch />
                 </div>
               </div>
             </>
