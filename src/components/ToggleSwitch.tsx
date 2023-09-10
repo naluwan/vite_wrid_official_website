@@ -3,22 +3,12 @@ import { cn } from '@/lib/utils';
 
 import { useTheme } from '@/components/ThemeProvider';
 
-type ToggleSwitchProps = {
-  onSetOpenPanel: (open: boolean) => void;
-};
-
-const ToggleSwitch: React.FC<ToggleSwitchProps> = (props) => {
-  const { onSetOpenPanel } = props;
+const ToggleSwitch: React.FC = () => {
   const { theme, setTheme } = useTheme();
-
-  const atClickSwitch = React.useCallback((witchTheme: string) => {
-    setTheme(witchTheme === 'dark' ? 'light' : 'dark');
-    onSetOpenPanel(false);
-  }, []);
 
   return (
     <button
-      onClick={() => atClickSwitch(theme)}
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className={cn('relative flex h-8 w-16 rounded-full bg-gray-600', {
         'bg-green-500': theme === 'dark',
       })}
