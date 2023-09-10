@@ -19,14 +19,6 @@ export interface IRef {
 }
 
 const App: React.FC = () => {
-  // const { theme, setTheme } = useTheme();
-
-  // return (
-  //   <div className='flex w-full items-center justify-center text-center text-xl'>
-  //     <div>Vite + React + Typescript + Eslint + Prettier + TailWindCSS</div>
-
-  //   </div>
-  // );
   const [openPanel, setOpenPanel] = React.useState(false);
 
   // popover panel ref
