@@ -56,3 +56,11 @@ export const homeImages = [
     imgSrc: 'https://i.imgur.com/KU0e3QA.jpg',
   },
 ];
+
+export const ceoExp = [
+  { year: 2023, content: '2023' },
+  { year: 2022, content: '2022' },
+  { year: 2019, content: '2019' },
+  { year: 2017, content: '2017' },
+  { year: 2015, content: '2015' },
+];

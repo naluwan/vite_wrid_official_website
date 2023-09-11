@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const AboutCEO: React.FC = () => {
   return (
-    <div className='w-full items-center justify-center py-12 md:flex'>
+    <div className='w-full max-w-screen-2xl items-center justify-center py-12 md:flex'>
       <div className='flex flex-1 flex-col items-center px-2 md:min-w-[40%]'>
         <div className='aspect-square max-h-[500px] max-w-[500px]'>
           <img src={ceo} alt='ceo' className='h-full w-full object-contain' />

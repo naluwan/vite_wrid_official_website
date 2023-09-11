@@ -2,7 +2,7 @@ import './App.css';
 
 import React from 'react';
 import NavBar from '@/components/NavBar';
-import MaxContainer from '@/components/MacContainer';
+// import MaxContainer from '@/components/MacContainer';
 import { Route, Routes } from 'react-router-dom';
 
 import About from '@/pages/About';
@@ -38,16 +38,14 @@ const App: React.FC = () => {
   return (
     <main className='relative'>
       <NavBar ref={panelRef} openPanel={openPanel} onSetOpenPanel={setOpenPanel} />
-      <MaxContainer>
-        <Routes>
-          <Route element={<Home />} path='/' />
-          <Route element={<About />} path='/about' />
-          <Route element={<Process />} path='/process' />
-          <Route element={<Collections />} path='/collections' />
-          <Route element={<Contact />} path='/contact' />
-          <Route element={<NotFound />} path='*' />
-        </Routes>
-      </MaxContainer>
+      <Routes>
+        <Route element={<Home />} path='/' />
+        <Route element={<About />} path='/about' />
+        <Route element={<Process />} path='/process' />
+        <Route element={<Collections />} path='/collections' />
+        <Route element={<Contact />} path='/contact' />
+        <Route element={<NotFound />} path='*' />
+      </Routes>
       <Footer />
     </main>
   );

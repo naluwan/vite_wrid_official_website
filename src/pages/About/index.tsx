@@ -1,5 +1,5 @@
 import React from 'react';
-import { homeImages } from '@/constants';
+import { homeImages, ceoExp } from '@/constants';
 import Slides from '@/components/Slides';
 import ceo from '/assets/images/ceo.jpg';
 
@@ -9,10 +9,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import MaxContainer from '@/components/MacContainer';
 
 const About: React.FC = () => {
   return (
-    <>
+    <MaxContainer>
       {/* 公司簡介 */}
       <div className='w-full'>
         <h1 className='max-w-md:text-3xl py-3 text-center text-2xl font-bold'>
@@ -42,59 +43,22 @@ const About: React.FC = () => {
           <div className='flex h-full w-full flex-1 flex-col justify-center p-8 pt-0 leading-10 max-md:p-4 max-md:leading-8'>
             <h1 className='text-center text-2xl'>設計旅程</h1>
             <Accordion type='single' collapsible className='w-full '>
-              <AccordionItem value='item-1'>
-                <AccordionTrigger className='p-0 pt-4 text-left text-lg text-black dark:text-white'>
-                  2023年 - 經歷
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value='item-2'>
-                <AccordionTrigger className='p-0 pt-4 text-left text-lg text-black dark:text-white'>
-                  2022年 - 經歷
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes. It comes with default styles that matches the other
-                  components&apos; aesthetic.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value='item-3'>
-                <AccordionTrigger className='p-0 pt-4 text-left text-lg text-black dark:text-white'>
-                  2019年 - 經歷
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes. It&apos;s animated by default, but you can disable it if you
-                  prefer.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value='item-4'>
-                <AccordionTrigger className='p-0 pt-4 text-left text-lg text-black dark:text-white'>
-                  2017年 - 經歷
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes. It comes with default styles that matches the other
-                  components&apos; aesthetic.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value='item-5'>
-                <AccordionTrigger className='p-0 pt-4 text-left text-lg text-black dark:text-white'>
-                  2015年 - 經歷
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes. It comes with default styles that matches the other
-                  components&apos; aesthetic.
-                </AccordionContent>
-              </AccordionItem>
+              {ceoExp.map((exp, idx) => (
+                <AccordionItem
+                  key={`${exp.year}-accordionItem`}
+                  value={`item-${idx + 1}`}
+                >
+                  <AccordionTrigger className='p-0 pt-4 text-left text-lg text-black dark:text-white'>
+                    {exp.year}年 - 經歷
+                  </AccordionTrigger>
+                  <AccordionContent>{exp.content}</AccordionContent>
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
         </div>
       </section>
-    </>
+    </MaxContainer>
   );
 };
 
