@@ -1,7 +1,7 @@
 import React from 'react';
 import { homeImages } from '@/constants';
 import Slides from '@/components/Slides';
-import ceo from '@/assets/images/ceo.jpg';
+import ceo from '../../../public/assets/images/ceo.jpg';
 
 import {
   Accordion,

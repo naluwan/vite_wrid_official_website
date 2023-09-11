@@ -1,5 +1,5 @@
 import React from 'react';
-import ceo from '@/assets/images/ceo.jpg';
+import ceo from '../../../../public/assets/images/ceo.jpg';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
