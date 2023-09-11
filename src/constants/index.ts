@@ -58,9 +58,9 @@ export const homeImages = [
 ];
 
 export const ceoExp = [
-  { year: 2023, content: '2023' },
-  { year: 2022, content: '2022' },
-  { year: 2019, content: '2019' },
-  { year: 2017, content: '2017' },
-  { year: 2015, content: '2015' },
+  { year: 2023, content: '任職 吾境設計 設計執行總監' },
+  { year: 2022, content: '任職 新境創作設計 設計部主管' },
+  { year: 2019, content: '任職 浩室設計 設計部主管' },
+  { year: 2017, content: '任職 帷圓設計 設計師' },
+  { year: 2015, content: '任職 萊得爾室內設計 設計師' },
 ];

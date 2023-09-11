@@ -36,7 +36,7 @@ const About: React.FC = () => {
               <img src={ceo} alt='ceo' className='h-full w-full object-contain' />
             </div>
             <p className='text-lg font-bold text-black dark:text-white'>
-              吾境設計負責人 - 陳映志
+              吾境設計總監 - 陳映志
             </p>
           </div>
 
