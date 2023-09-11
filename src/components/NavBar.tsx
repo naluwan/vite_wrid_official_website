@@ -1,6 +1,6 @@
 import React from 'react';
-import navLogoLight from '/assets/images/navLogoLight.png';
-import navLogoDark from '/assets/images/navLogoDark.png';
+import navLogoLight from '/navLogoLight.png';
+import navLogoDark from '/navLogoDark.png';
 import { navLinks } from '@/constants/index';
 import { Link, useNavigate } from 'react-router-dom';
 import { IRef } from 'App';
