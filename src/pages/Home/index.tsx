@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   return (
     <>
       {/* 作品展示 */}
-      <div className='my-5 mb-[60px] grid w-full gap-4 px-20 md:grid-cols-2 lg:grid-cols-4'>
+      <div className='my-5 mb-[60px] grid w-full gap-4 px-4 md:grid-cols-2 lg:grid-cols-4 xl:px-20'>
         {homeImages.map((img, index) => (
           <Images
             key={img.label}

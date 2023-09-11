@@ -46,8 +46,8 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
   }));
 
   return (
-    <header className='= absolute top-0 z-50 w-full bg-white dark:bg-black'>
-      <nav className='mt-4 box-border flex h-[60px] items-center justify-between px-2 lg:mx-auto lg:max-w-screen-xl lg:px-4'>
+    <header className='absolute top-0 z-50 w-full bg-white dark:bg-black'>
+      <nav className='mt-4 box-border flex h-[60px] max-w-screen-2xl items-center justify-between px-2 lg:mx-auto xl:px-20'>
         <Link to='/' className='flex items-center'>
           <img
             src={theme === 'dark' ? navLogoDark : navLogoLight}

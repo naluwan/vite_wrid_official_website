@@ -5,8 +5,8 @@ import { ArrowRight } from 'lucide-react';
 
 const AboutCEO: React.FC = () => {
   return (
-    <div className='w-full items-center justify-center md:flex'>
-      <div className='flex flex-1 flex-col items-center p-8 py-12 md:min-w-[40%]'>
+    <div className='w-full items-center justify-center py-12 md:flex'>
+      <div className='flex flex-1 flex-col items-center px-2 md:min-w-[40%]'>
         <div className='aspect-square max-h-[500px] max-w-[500px]'>
           <img src={ceo} alt='ceo' className='h-full w-full object-contain' />
         </div>
@@ -15,7 +15,7 @@ const AboutCEO: React.FC = () => {
         </p>
       </div>
 
-      <div className='flex w-full flex-1 flex-col p-8 pt-0 text-lg leading-10 text-white dark:text-black max-md:text-sm max-md:leading-8'>
+      <div className='flex w-full flex-1 flex-col p-8 pt-0 text-lg leading-10 text-white dark:text-black max-md:p-4 max-md:text-base max-md:leading-8'>
         <div>吾境設計 WRID.Ltd</div>
         <div>吾 亦以居者為中心發想</div>
         <div>境 即是描摹故事的場域</div>
