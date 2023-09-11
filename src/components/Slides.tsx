@@ -1,9 +1,11 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y, Swiper as SwiperType } from 'swiper';
+import { Navigation, Pagination, A11y, Autoplay, Swiper as SwiperType } from 'swiper';
 import { ImageType } from '@/components/type';
 
 import { ChevronLeftCircle, ChevronRightCircle } from 'lucide-react';
+
+import { cn } from '@/lib/utils';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,10 +14,11 @@ import 'swiper/css/pagination';
 type SlidesProps = {
   images: ImageType[];
   initSlide: number;
+  autoPlay: boolean;
 };
 
 const Slides: React.FC<SlidesProps> = (props) => {
-  const { images, initSlide } = props;
+  const { images, initSlide, autoPlay } = props;
   // 宣告一個ref來儲存swiper物件
   const swiperRef = React.useRef<SwiperType>();
 
@@ -26,12 +29,15 @@ const Slides: React.FC<SlidesProps> = (props) => {
     swiperRef.current?.slideTo(initSlide, 100, false);
   }, [initSlide]);
 
+  const paginationType = !autoPlay ? 'fraction' : 'bullets';
+
   return (
     <Swiper
-      modules={[Navigation, Pagination, A11y]}
+      modules={[Navigation, Pagination, A11y, Autoplay]}
       slidesPerView={1}
-      pagination={{ type: 'fraction' }}
+      pagination={{ type: paginationType, clickable: autoPlay }}
       initialSlide={0}
+      autoplay={autoPlay && { delay: 5000 }}
       onBeforeInit={(swiper) => {
         swiperRef.current = swiper;
       }}
@@ -41,22 +47,28 @@ const Slides: React.FC<SlidesProps> = (props) => {
           <img
             src={img.imgSrc}
             alt={img.label}
-            className='h-full max-h-[580px] w-full max-w-screen-2xl rounded-lg object-contain '
+            className={cn('h-full max-h-[570px] w-full object-contain', {
+              'rounded-lg': !autoPlay,
+            })}
           />
         </SwiperSlide>
       ))}
-      <button
-        className='absolute right-0 top-[45%] z-20 bg-transparent p-0 px-2'
-        onClick={() => swiperRef.current?.slideNext()}
-      >
-        <ChevronRightCircle className='h-10 w-10 text-slate-400/50' />
-      </button>
-      <button
-        className='absolute left-0 top-[45%] z-20 bg-transparent p-0 px-2'
-        onClick={() => swiperRef.current?.slidePrev()}
-      >
-        <ChevronLeftCircle className='h-10 w-10 text-slate-400/50' />
-      </button>
+      {!autoPlay && (
+        <>
+          <button
+            className='absolute right-0 top-[45%] z-20 bg-transparent p-0 px-2'
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            <ChevronRightCircle className='h-10 w-10 text-slate-400/50' />
+          </button>
+          <button
+            className='absolute left-0 top-[45%] z-20 bg-transparent p-0 px-2'
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            <ChevronLeftCircle className='h-10 w-10 text-slate-400/50' />
+          </button>
+        </>
+      )}
     </Swiper>
   );
 };

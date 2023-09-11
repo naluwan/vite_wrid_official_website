@@ -112,3 +112,11 @@
   display: flex !important;
   align-items: center !important;
 }
+
+.swiper-pagination-bullet {
+  background-color: rgb(253 186 116) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(249 115 22 / 0.8) !important;
+}

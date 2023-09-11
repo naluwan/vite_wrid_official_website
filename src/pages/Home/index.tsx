@@ -3,7 +3,7 @@ import React from 'react';
 import { homeImages } from '@/constants';
 import Modal from '@/components/Modal';
 import Images from '@/components/Images';
-import Slides from '@/pages/Home/components/Slides';
+import Slides from '@/components/Slides';
 import AboutCEO from '@/pages/Home/components/AboutCEO';
 
 const Home: React.FC = () => {
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
 
       {/* 作品單頁彈跳窗 */}
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
-        <Slides images={homeImages} initSlide={initSlide} />
+        <Slides images={homeImages} initSlide={initSlide} autoPlay={false} />
       </Modal>
     </>
   );
