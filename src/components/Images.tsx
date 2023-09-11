@@ -19,9 +19,13 @@ const Images: React.FC<ImagesProps> = (props) => {
   }, []);
 
   return (
-    <AspectRatio ratio={1.5 / 1} key={img.label} className='group relative'>
+    <AspectRatio
+      ratio={1.5 / 1}
+      key={img.label}
+      className='group relative origin-top-left animate-openImagesContainer overflow-hidden'
+    >
       <div className='absolute left-0 top-0 z-20 hidden h-full w-full bg-black/40 group-hover:block'>
-        <div className='flex h-full w-full flex-col items-start justify-center border border-blue-400 px-4'>
+        <div className='flex h-full w-full flex-col items-start justify-center px-4'>
           <span className='text-2xl text-white'>{img.label}</span>
           <div className='flex w-full items-center pt-2'>
             <button
@@ -42,7 +46,11 @@ const Images: React.FC<ImagesProps> = (props) => {
           </div>
         </div>
       </div>
-      <img src={img.imgSrc} className='h-full w-full object-cover' alt={img.label} />
+      <img
+        src={img.imgSrc}
+        className='h-full w-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110'
+        alt={img.label}
+      />
     </AspectRatio>
   );
 };

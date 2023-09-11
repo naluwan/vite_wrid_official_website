@@ -6,7 +6,7 @@
   },
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 3030",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
