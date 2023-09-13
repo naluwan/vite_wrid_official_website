@@ -67,11 +67,11 @@ module.exports = {
           to: { height: 0 },
         },
         openImagesContainer: {
-          '0%': { transform: 'scale(0)', opacity: 0 },
-          '25%': { transform: 'scale(.25)', opacity: 25 },
-          '50%': { transform: 'scale(.5)', opacity: 50 },
-          '75%': { transform: 'scale(.75)', opacity: 75 },
-          '100%': { transform: 'scale(1)', opacity: 100 },
+          '0%': { opacity: 0 },
+          '25%': { opacity: 25 },
+          '50%': { opacity: 50 },
+          '75%': { opacity: 75 },
+          '100%': { opacity: 100 },
         },
         openImage: {
           from: { transform: 'rotateY(0deg)', opacity: 0 },
@@ -81,7 +81,7 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        openImagesContainer: 'openImagesContainer 0.7s linear',
+        openImagesContainer: 'openImagesContainer 7s ease-in-out',
         openImage: 'openImage 1s ease-in-out',
       },
     },
