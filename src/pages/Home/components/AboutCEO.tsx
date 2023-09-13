@@ -16,7 +16,6 @@ const AboutCEO: React.FC = () => {
       </div>
 
       <div className='flex w-full flex-1 flex-col p-8 pt-0 text-lg leading-10 text-white dark:text-black max-md:p-4 max-md:text-base max-md:leading-8'>
-        <div>吾境設計 WRID.Ltd</div>
         <div>吾 亦以居者為中心發想</div>
         <div>境 即是描摹故事的場域</div>
         <div className='w-[20%] border-b-[1px] border-b-white pt-4 dark:border-b-black' />
