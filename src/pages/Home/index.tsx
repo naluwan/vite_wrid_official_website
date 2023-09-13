@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { homeImages } from '@/constants';
+import { collectionsData } from '@/constants';
 import Modal from '@/components/Modal';
 import Images from '@/components/Images';
 import Slides from '@/components/Slides';
@@ -16,10 +16,10 @@ const Home: React.FC = () => {
       {/* 作品展示 */}
       <MaxContainer>
         <div className='my-5 mb-[60px] grid w-full gap-4 px-4 md:grid-cols-2 lg:grid-cols-4 xl:px-20'>
-          {homeImages.map((img, index) => (
+          {collectionsData.map((item, index) => (
             <Images
-              key={img.label}
-              img={img}
+              key={item.label}
+              img={item}
               slideNum={index}
               onSetOpenModal={() => setOpenModal(true)}
               onSetInitSlide={setInitSlide}
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
 
       {/* 作品單頁彈跳窗 */}
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
-        <Slides images={homeImages} initSlide={initSlide} autoPlay={false} />
+        <Slides images={collectionsData} initSlide={initSlide} autoPlay={false} />
       </Modal>
     </>
   );

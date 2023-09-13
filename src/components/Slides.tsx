@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, Autoplay, Swiper as SwiperType } from 'swiper';
-import { ImageType } from '@/components/type';
+import { CollectionsDataType } from '@/components/type';
 
 import { ChevronLeftCircle, ChevronRightCircle } from 'lucide-react';
 
@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 type SlidesProps = {
-  images: ImageType[];
+  images: CollectionsDataType[];
   initSlide: number;
   autoPlay: boolean;
 };
@@ -42,14 +42,12 @@ const Slides: React.FC<SlidesProps> = (props) => {
         swiperRef.current = swiper;
       }}
     >
-      {images.map((img) => (
-        <SwiperSlide key={`${img.label}-slide`}>
+      {images.map((items) => (
+        <SwiperSlide key={`${items.label}-slide`}>
           <img
-            src={img.imgSrc}
-            alt={img.label}
-            className={cn('h-full max-h-[570px] w-full object-contain', {
-              'rounded-lg': !autoPlay,
-            })}
+            src={items.images[0].src}
+            alt={items.images[0].name}
+            className={cn('h-full max-h-[570px] w-full object-contain')}
           />
         </SwiperSlide>
       ))}
