@@ -59,7 +59,12 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
             吾境設計
           </span>
         </Link>
-        <ul className='flex h-full flex-1 items-end justify-end gap-12 px-3 max-lg:hidden'>
+        <Link to='/' className='flex-1 text-center'>
+          <span className='hidden w-full text-2xl font-bold text-black dark:text-white max-lg:block'>
+            吾境設計
+          </span>
+        </Link>
+        <ul className='flex h-full items-end justify-end gap-12 px-3 max-lg:hidden'>
           {navLinks.map((link: { href: string; label: string }) => (
             <li
               key={link.label}
@@ -92,7 +97,7 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
           </li>
         </ul>
 
-        <div className='group relative z-10 hidden rounded-lg max-lg:block'>
+        <div className='group relative z-10 m-0 hidden rounded-lg pl-2 max-lg:block'>
           <Hamburger
             ref={buttonRef}
             openPanel={openPanel}
@@ -103,105 +108,120 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
               {/* 首頁 */}
               <div className='mb-2'>
                 <button
-                  className='hamburgerItem'
+                  className='w-full bg-transparent p-0'
                   onClick={() => {
                     onSetOpenPanel(false);
                     go('/');
                   }}
                 >
-                  {/* left icon */}
-                  <div className='leftIconDiv'>
-                    <Home className='leftIcon' />
-                  </div>
+                  <div className='hamburgerItem'>
+                    {/* left icon */}
+                    <div className='leftIconDiv'>
+                      <Home className='leftIcon' />
+                    </div>
 
-                  {/* right text */}
-                  <div className='flex-1'>
-                    <p className='rightText'>首頁</p>
+                    {/* right text */}
+                    <div className='flex-1'>
+                      <p className='rightText'>首頁</p>
+                    </div>
                   </div>
+                  <div className='border-b border-dotted border-black dark:border-white' />
                 </button>
               </div>
 
               {/* 關於我們 */}
               <div className='mb-2'>
                 <button
-                  className='hamburgerItem'
+                  className='w-full bg-transparent p-0'
                   onClick={() => {
                     onSetOpenPanel(false);
                     go('/about');
                   }}
                 >
-                  {/* left icon */}
-                  <div className='leftIconDiv'>
-                    <MessageCircle className='leftIcon' />
-                  </div>
+                  <div className='hamburgerItem'>
+                    {/* left icon */}
+                    <div className='leftIconDiv'>
+                      <MessageCircle className='leftIcon' />
+                    </div>
 
-                  {/* right text */}
-                  <div className='flex-1'>
-                    <p className='rightText'>關於我們</p>
+                    {/* right text */}
+                    <div className='flex-1'>
+                      <p className='rightText'>關於我們</p>
+                    </div>
                   </div>
+                  <div className='border-b border-dotted border-black dark:border-white' />
                 </button>
               </div>
 
               {/* 設計流程 */}
               <div className='mb-2'>
                 <button
-                  className='hamburgerItem'
+                  className='w-full bg-transparent p-0'
                   onClick={() => {
                     onSetOpenPanel(false);
                     go('/process');
                   }}
                 >
-                  {/* left icon */}
-                  <div className='leftIconDiv'>
-                    <LayoutDashboard className='leftIcon' />
-                  </div>
+                  <div className='hamburgerItem'>
+                    {/* left icon */}
+                    <div className='leftIconDiv'>
+                      <LayoutDashboard className='leftIcon' />
+                    </div>
 
-                  {/* right text */}
-                  <div className='flex-1'>
-                    <p className='rightText'>設計流程</p>
+                    {/* right text */}
+                    <div className='flex-1'>
+                      <p className='rightText'>設計流程</p>
+                    </div>
                   </div>
+                  <div className='border-b border-dotted border-black dark:border-white' />
                 </button>
               </div>
 
               {/* 作品欣賞 */}
               <div className='mb-2'>
                 <button
-                  className='hamburgerItem'
+                  className='w-full bg-transparent p-0'
                   onClick={() => {
                     onSetOpenPanel(false);
                     go('/collections');
                   }}
                 >
-                  {/* left icon */}
-                  <div className='leftIconDiv'>
-                    <FileStack className='leftIcon' />
-                  </div>
+                  <div className='hamburgerItem'>
+                    {/* left icon */}
+                    <div className='leftIconDiv'>
+                      <FileStack className='leftIcon' />
+                    </div>
 
-                  {/* right text */}
-                  <div className='flex-1'>
-                    <p className='rightText'>作品欣賞</p>
+                    {/* right text */}
+                    <div className='flex-1'>
+                      <p className='rightText'>作品欣賞</p>
+                    </div>
                   </div>
+                  <div className='border-b border-dotted border-black dark:border-white' />
                 </button>
               </div>
 
               {/* 聯絡我們 */}
               <div className='mb-2'>
                 <button
-                  className='hamburgerItem'
+                  className='w-full bg-transparent p-0'
                   onClick={() => {
                     onSetOpenPanel(false);
                     go('/contact');
                   }}
                 >
-                  {/* left icon */}
-                  <div className='leftIconDiv'>
-                    <MapPin className='leftIcon' />
-                  </div>
+                  <div className='hamburgerItem'>
+                    {/* left icon */}
+                    <div className='leftIconDiv'>
+                      <MapPin className='leftIcon' />
+                    </div>
 
-                  {/* right text */}
-                  <div className='flex-1'>
-                    <p className='rightText'>聯絡我們</p>
+                    {/* right text */}
+                    <div className='flex-1'>
+                      <p className='rightText'>聯絡我們</p>
+                    </div>
                   </div>
+                  <div className='border-b border-dotted border-black dark:border-white' />
                 </button>
               </div>
 
