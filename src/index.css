@@ -77,7 +77,7 @@
 
 @layer components {
   .popover-panel {
-    @apply absolute -right-[0.5rem] top-10 w-screen rounded-lg border border-[#efefef] bg-white p-4 shadow-lg dark:bg-[#262626];
+    @apply absolute -right-[0.5rem] top-10 w-screen bg-white p-4 shadow-lg shadow-black/80 dark:bg-[#262626] dark:shadow-white/30;
   }
 
   .hamburgerItem {
