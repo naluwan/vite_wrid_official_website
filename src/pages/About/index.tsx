@@ -1,5 +1,5 @@
 import React from 'react';
-import { homeImages, ceoExp } from '@/constants';
+import { collectionsData, ceoExp } from '@/constants';
 import Slides from '@/components/Slides';
 import ceo from '@/assets/images/CEO.jpg';
 
@@ -12,6 +12,11 @@ import {
 import MaxContainer from '@/components/MacContainer';
 
 const About: React.FC = () => {
+  // 讓畫面回到最上面
+  React.useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <MaxContainer>
       {/* 公司簡介 */}
@@ -26,7 +31,7 @@ const About: React.FC = () => {
       </div>
 
       {/* 輪播圖 */}
-      <Slides images={homeImages} initSlide={0} autoPlay={true} />
+      <Slides images={collectionsData} initSlide={0} autoPlay={true} />
 
       {/* 負責人資訊 */}
       <section className='px-2 sm:px-8 sm:py-12'>
@@ -41,17 +46,22 @@ const About: React.FC = () => {
           </div>
 
           <div className='flex h-full w-full flex-1 flex-col justify-center p-8 pt-0 leading-10 max-md:p-4 max-md:leading-8'>
-            <h1 className='text-center text-2xl'>設計旅程</h1>
-            <Accordion type='single' collapsible className='w-full '>
+            <div className='flex h-full w-full flex-col items-center justify-start p-7 text-center'>
+              <p className='text-lg'>吾 慢 生 活．境 舒 享 悠</p>
+              <p className='text-lg'>尊 享 客 製．細 緻 品 味</p>
+            </div>
+
+            <h1 className='text-center text-3xl'>設計旅程</h1>
+            <Accordion type='single' collapsible className='w-full' defaultValue='item-1'>
               {ceoExp.map((exp, idx) => (
                 <AccordionItem
                   key={`${exp.year}-accordionItem`}
                   value={`item-${idx + 1}`}
                 >
-                  <AccordionTrigger className='p-0 pt-4 text-left text-lg text-black dark:text-white'>
+                  <AccordionTrigger className='p-0 pt-4 text-left text-xl text-black dark:text-white'>
                     {exp.year}年 - 經歷
                   </AccordionTrigger>
-                  <AccordionContent>{exp.content}</AccordionContent>
+                  <AccordionContent className='text-lg'>{exp.content}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
