@@ -10,7 +10,7 @@ const Hamburger = React.forwardRef<HTMLButtonElement, HamburgerProps>((props, re
 
   return (
     <button
-      className='z-20 h-6 w-6 rounded-sm bg-transparent text-black focus:outline-none  dark:text-white'
+      className='z-20 h-6 w-6 rounded-sm bg-transparent p-0 text-black focus:outline-none  dark:text-white'
       ref={ref}
       onClick={() => onSetOpenPanel(!openPanel)}
     >
@@ -30,7 +30,7 @@ const Hamburger = React.forwardRef<HTMLButtonElement, HamburgerProps>((props, re
         />
         <span
           aria-hidden='true'
-          className={`absolute block  h-0.5 w-5 transform bg-current transition duration-500 ease-in-out ${
+          className={`absolute block h-0.5 w-5 transform bg-current transition duration-500 ease-in-out ${
             openPanel ? '-rotate-45' : 'translate-y-1.5'
           }`}
         />
