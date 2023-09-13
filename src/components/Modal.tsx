@@ -33,7 +33,7 @@ const Modal: React.FC<ModalProps> = (props) => {
       </button>
       {/* modal */}
       <div
-        className={`h-auto w-full overflow-auto rounded-lg transition-all duration-300 ${
+        className={`h-auto w-full overflow-auto rounded-lg duration-500 ease-in-out max-sm:max-md:rounded-none ${
           open ? 'scale-100 opacity-100' : 'scale-125 opacity-0'
         }`}
         onClick={(e) => e.stopPropagation()}
