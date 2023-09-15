@@ -5,6 +5,8 @@ export type ImageType = {
 };
 
 export type CollectionsDataType = {
+  id: string;
   label: string;
+  category: string;
   images: ImageType[];
 };
