@@ -21,12 +21,12 @@ const Images: React.FC<ImagesProps> = (props) => {
   return (
     <AspectRatio
       ratio={1.5 / 1}
-      key={img.label}
+      key={img.id}
       className='group relative animate-openImagesContainer overflow-hidden'
     >
       <div className='absolute left-0 top-0 z-20 h-full w-full bg-black/40 opacity-0 delay-200 duration-1000 group-hover:opacity-100'>
         <div className='flex h-full w-full flex-col items-start justify-center px-4'>
-          <span className='text-2xl text-white'>{img.label}</span>
+          <span className='text-2xl tracking-widest text-white'>{img.label}</span>
           <div className='flex w-full items-center pt-2'>
             <button
               onClick={() => handleOpenModal(slideNum)}
