@@ -35,6 +35,7 @@ const Slides: React.FC<SlidesProps> = (props) => {
     <Swiper
       modules={[Navigation, Pagination, A11y, Autoplay]}
       slidesPerView={1}
+      loop={true}
       pagination={{ type: paginationType, clickable: autoPlay }}
       initialSlide={0}
       autoplay={autoPlay && { delay: 5000 }}
