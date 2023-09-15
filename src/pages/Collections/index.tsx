@@ -18,7 +18,7 @@ type PaginationType = {
 
 const Collections: React.FC = () => {
   const [category, setCategory] = React.useState('home');
-  const [limit, setLimit] = React.useState(4);
+  const [limit, setLimit] = React.useState(12);
   const [openModal, setOpenModal] = React.useState(false);
   const [initSlide, setInitSlide] = React.useState(0);
   const [filteredData, setFilteredData] = React.useState<CollectionsDataType[]>([]);
