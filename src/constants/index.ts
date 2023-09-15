@@ -22,7 +22,9 @@ export const navLinks = [
 
 export const collectionsData = [
   {
-    label: '天母 - 藝境',
+    id: 'collection1',
+    label: '天母-藝境',
+    category: 'home',
     images: [
       { id: 1, name: '天母1', src: collection1.image1 },
       { id: 2, name: '天母2', src: collection1.image2 },
@@ -30,7 +32,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '敦化 - 隅',
+    id: 'collection2',
+    label: '敦化-隅',
+    category: 'home',
     images: [
       { id: 4, name: '敦化1', src: collection2.image1 },
       { id: 5, name: '敦化2', src: collection2.image2 },
@@ -42,7 +46,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '松山 - 璟',
+    id: 'collection3',
+    label: '松山-璟',
+    category: 'home',
     images: [
       { id: 11, name: '松山1', src: collection3.image1 },
       { id: 12, name: '松山2', src: collection3.image2 },
@@ -53,7 +59,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '新竹 - 叁人',
+    id: 'collection4',
+    label: '新竹-叁人',
+    category: 'home',
     images: [
       { id: 17, name: '松山1', src: collection4.image1 },
       { id: 18, name: '松山2', src: collection4.image2 },
@@ -66,7 +74,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '永和 - 桐',
+    id: 'collection5',
+    label: '永和-桐',
+    category: 'home',
     images: [
       { id: 25, name: '永和1', src: collection5.image1 },
       { id: 26, name: '永和2', src: collection5.image2 },
@@ -76,7 +86,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '大直 - 靜',
+    id: 'collection6',
+    label: '大直-靜',
+    category: 'home',
     images: [
       { id: 30, name: '大直1', src: collection6.image1 },
       { id: 31, name: '大直2', src: collection6.image2 },
@@ -88,7 +100,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '南港 - 山匯',
+    id: 'collection7',
+    label: '南港-山匯',
+    category: 'home',
     images: [
       { id: 37, name: '南港1', src: collection7.image1 },
       { id: 38, name: '南港2', src: collection7.image2 },
@@ -98,7 +112,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '東湖 - 暖',
+    id: 'collection8',
+    label: '東湖-暖',
+    category: 'home',
     images: [
       { id: 42, name: '東湖1', src: collection8.image1 },
       { id: 43, name: '東湖2', src: collection8.image2 },
@@ -108,7 +124,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '新生南 - 家',
+    id: 'collection9',
+    label: '新生南-家',
+    category: 'home',
     images: [
       { id: 47, name: '新生南1', src: collection9.image1 },
       { id: 48, name: '新生南2', src: collection9.image2 },
@@ -118,7 +136,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '龜山 - 仛',
+    id: 'collection10',
+    label: '龜山-仛',
+    category: 'home',
     images: [
       { id: 52, name: '龜山1', src: collection10.image1 },
       { id: 53, name: '龜山2', src: collection10.image2 },
@@ -130,7 +150,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '林口 - 境',
+    id: 'collection11',
+    label: '林口-境',
+    category: 'home',
     images: [
       { id: 59, name: '林口1', src: collection11.image1 },
       { id: 60, name: '林口2', src: collection11.image2 },
@@ -139,7 +161,9 @@ export const collectionsData = [
     ],
   },
   {
-    label: '竹北 - 招待所',
+    id: 'collection12',
+    label: '竹北-招待所',
+    category: 'company',
     images: [
       { id: 63, name: '竹北1', src: collection12.image1 },
       { id: 64, name: '竹北2', src: collection12.image2 },
