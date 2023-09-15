@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   const [initSlide, setInitSlide] = React.useState(0);
 
   return (
-    <>
+    <div className='pb-20'>
       {/* 作品展示 */}
       <MaxContainer>
         <div className='my-5 mb-[60px] grid w-full gap-4 px-4 md:grid-cols-2 lg:grid-cols-4 xl:px-20'>
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
         <Slides images={collectionsData} initSlide={initSlide} autoPlay={false} />
       </Modal>
-    </>
+    </div>
   );
 };
 
