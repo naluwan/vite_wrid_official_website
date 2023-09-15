@@ -1,9 +1,11 @@
 import React from 'react';
 import ceo from '@/assets/images/CEO.jpg';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const AboutCEO: React.FC = () => {
+  const go = useNavigate();
+
   return (
     <div className='w-full max-w-screen-2xl items-start justify-center py-12 md:flex'>
       <div className='flex flex-1 flex-col items-center px-2 md:min-w-[40%]'>
@@ -24,11 +26,12 @@ const AboutCEO: React.FC = () => {
         <div>運用材質重新架構空間品味</div>
         <div>創新思維結合現代設計演繹出完美訂製級設計</div>
         <div className='pt-4'>
-          <button className='bg-slate-500 px-5 text-base font-bold'>
-            <Link to='/about' className='flex w-full items-center'>
-              <span>Read more</span>
-              <ArrowRight className='ml-2 h-5 w-5' strokeWidth={4} />
-            </Link>
+          <button
+            className='flex items-center bg-slate-500 px-5 text-base font-bold'
+            onClick={() => go('/about')}
+          >
+            <span>Read more</span>
+            <ArrowRight className='ml-2 h-5 w-5' strokeWidth={4} />
           </button>
         </div>
       </div>
