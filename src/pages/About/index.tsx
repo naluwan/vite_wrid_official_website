@@ -45,10 +45,10 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className='flex h-full w-full flex-1 flex-col justify-center p-8 pt-0 leading-10 max-md:p-4 max-md:leading-8'>
-            <div className='flex h-full w-full flex-col items-center justify-start p-7 text-center'>
-              <p className='text-lg'>吾 慢 生 活．境 舒 享 悠</p>
-              <p className='text-lg'>尊 享 客 製．細 緻 品 味</p>
+          <div className='flex h-full w-full flex-1 flex-col p-8 pt-0 max-md:p-4'>
+            <div className='flex h-full w-full flex-col items-center justify-start p-7 pt-0 text-center'>
+              <p className='text-lg tracking-widest'>吾慢生活．境舒享悠</p>
+              <p className='text-lg tracking-widest'>尊享客製．細緻品味</p>
             </div>
 
             <h1 className='text-center text-3xl'>設計旅程</h1>
