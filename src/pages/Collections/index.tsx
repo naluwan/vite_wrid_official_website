@@ -7,6 +7,7 @@ import Modal from '@/components/Modal';
 import Slides from '@/components/Slides';
 import type { CollectionsDataType } from '@/components/type';
 import { cn } from '@/lib/utils';
+import { useLocation } from 'react-router-dom';
 
 type PaginationType = {
   pages: number[];
@@ -16,14 +17,26 @@ type PaginationType = {
   hasNextPage: boolean;
 };
 
+// 獲取URL params function
+const useQuery = () => {
+  const { search } = useLocation();
+  return React.useMemo(() => new URLSearchParams(search), [search]);
+};
+
 const Collections: React.FC = () => {
-  const [category, setCategory] = React.useState('home');
+  const query = useQuery();
+  // 初始化設定如果使用者是從首頁點進來沒有params時，就將default設為home，否則就使用獲取的值
+  const [category, setCategory] = React.useState(() => {
+    if (query.get('category') !== null) {
+      return query.get('category') as string;
+    }
+    return 'home';
+  });
   const [limit, setLimit] = React.useState(12);
   const [openModal, setOpenModal] = React.useState(false);
   const [initSlide, setInitSlide] = React.useState(0);
   const [filteredData, setFilteredData] = React.useState<CollectionsDataType[]>([]);
   const [pagination, setPagination] = React.useState<PaginationType | null>();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [page, setPage] = React.useState(1);
   const [offset, setOffset] = React.useState(0);
 
@@ -77,7 +90,7 @@ const Collections: React.FC = () => {
       {/* 標籤 */}
       <div className='h-screen max-md:h-auto'>
         <div className='mt-5 flex w-full justify-center'>
-          <Tabs defaultValue='home' className='flex w-full flex-col items-center'>
+          <Tabs defaultValue={category} className='flex w-full flex-col items-center'>
             <TabsList>
               <TabsTrigger value='home' onClick={() => setCategory('home')}>
                 居住空間
