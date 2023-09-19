@@ -12,6 +12,7 @@ import NotFound from '@/pages/NotFound';
 import Footer from '@/sections/Footer';
 import Home from '@/pages/Home';
 import Contact from '@/pages/Contact';
+import Collection from '@/pages/Collection';
 
 export interface IRef {
   getDiv: () => HTMLDivElement;
@@ -44,6 +45,7 @@ const App: React.FC = () => {
         <Route element={<Process />} path='/process' />
         <Route element={<Collections />} path='/collections' />
         <Route element={<Contact />} path='/contact' />
+        <Route element={<Collection />} path='/:collectionName' />
         <Route element={<NotFound />} path='*' />
       </Routes>
       <Footer />
