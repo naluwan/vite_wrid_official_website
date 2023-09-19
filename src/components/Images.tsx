@@ -2,6 +2,7 @@ import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Search, Link } from 'lucide-react';
 import { CollectionsDataType } from '@/components/type';
+import { useNavigate } from 'react-router-dom';
 
 type ImagesProps = {
   img: CollectionsDataType;
@@ -13,6 +14,9 @@ type ImagesProps = {
 const Images: React.FC<ImagesProps> = (props) => {
   const { img, slideNum, onSetOpenModal, onSetInitSlide } = props;
 
+  const go = useNavigate();
+
+  // 打開預覽圖彈跳窗並設定點擊的圖片id
   const handleOpenModal = React.useCallback((slide: number) => {
     onSetOpenModal();
     onSetInitSlide(slide);
@@ -37,7 +41,10 @@ const Images: React.FC<ImagesProps> = (props) => {
                 strokeWidth={4}
               />
             </button>
-            <button className='relative ml-5 h-4 w-4 rounded-full bg-orange-300 p-4 duration-500 hover:bg-orange-500/80 hover:dark:bg-orange-500/80'>
+            <button
+              onClick={() => go(`/${img.id}`)}
+              className='relative ml-5 h-4 w-4 rounded-full bg-orange-300 p-4 duration-500 hover:bg-orange-500/80 hover:dark:bg-orange-500/80'
+            >
               <Link
                 className='absolute left-2 top-2 h-4 w-4 text-white'
                 strokeWidth={4}
