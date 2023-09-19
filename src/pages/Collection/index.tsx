@@ -13,6 +13,11 @@ const Collection: React.FC = () => {
     React.useState<CollectionsDataType | null>(null);
   const [scrollTop, setScrollTop] = React.useState(0);
 
+  // 讓畫面回到最上面
+  React.useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // 從URL找出collection name並對data資料做篩選找出使用者選取的collection
   React.useEffect(() => {
     setSelectedCollection(
