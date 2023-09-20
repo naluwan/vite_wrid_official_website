@@ -66,13 +66,6 @@ const Collections: React.FC = () => {
     [],
   );
 
-  // 獲取頁面高度，如過超過900就改為顯示20筆資料
-  React.useEffect(() => {
-    if (window.innerHeight > 900) {
-      setLimit(20);
-    }
-  });
-
   // 更新偏移量和pagination
   React.useEffect(() => {
     setOffset(getOffset(limit, page));
@@ -85,10 +78,28 @@ const Collections: React.FC = () => {
     setFilteredData(filtered);
   }, [category]);
 
+  // 獲取頁面高度，如過超過900就改為顯示20筆資料
+  const handleRWD = React.useCallback(() => {
+    if (window.innerHeight > 900) {
+      return setLimit(20);
+    }
+    setLimit(12);
+  }, []);
+
+  // 加入視窗變化監聽事件
+  React.useEffect(() => {
+    window.addEventListener('resize', handleRWD);
+    handleRWD();
+
+    return () => {
+      window.removeEventListener('resize', handleRWD);
+    };
+  });
+
   return (
     <MaxContainer>
       {/* 標籤 */}
-      <div className='h-screen max-md:h-auto'>
+      <div className='max-h-max'>
         <div className='mt-5 flex w-full justify-center'>
           <Tabs defaultValue={category} className='flex w-full flex-col items-center'>
             <TabsList>
