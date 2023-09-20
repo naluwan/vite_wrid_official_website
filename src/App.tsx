@@ -6,13 +6,14 @@ import NavBar from '@/components/NavBar';
 import { Route, Routes } from 'react-router-dom';
 
 import About from '@/pages/About';
-import Process from '@/pages/Process';
+import WorkFlow from '@/pages/WorkFlow';
 import Collections from '@/pages/Collections';
 import NotFound from '@/pages/NotFound';
 import Footer from '@/sections/Footer';
 import Home from '@/pages/Home';
 import Contact from '@/pages/Contact';
 import Collection from '@/pages/Collection';
+import Cost from '@/pages/Cost';
 
 export interface IRef {
   getDiv: () => HTMLDivElement;
@@ -42,7 +43,8 @@ const App: React.FC = () => {
       <Routes>
         <Route element={<Home />} path='/' />
         <Route element={<About />} path='/about' />
-        <Route element={<Process />} path='/process' />
+        <Route element={<WorkFlow />} path='/workFlow' />
+        <Route element={<Cost />} path='/cost' />
         <Route element={<Collections />} path='/collections' />
         <Route element={<Contact />} path='/contact' />
         <Route element={<Collection />} path='/:collectionName' />

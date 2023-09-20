@@ -14,7 +14,7 @@ import collection12 from '@/assets/images/collection12';
 export const navLinks = [
   { href: '/', label: '首頁' },
   { href: '/about', label: '關於我們' },
-  { href: '/process', label: '設計流程' },
+  { href: '/workFlow', label: '設計流程' },
   { href: '/cost', label: '收費標準' },
   { href: '/collections', label: '作品欣賞' },
   { href: '/contact', label: '聯絡我們' },

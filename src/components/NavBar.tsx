@@ -159,7 +159,7 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
                   className='w-full bg-transparent p-0'
                   onClick={() => {
                     onSetOpenPanel(false);
-                    go('/process');
+                    go('/workFlow');
                   }}
                 >
                   <div className='hamburgerItem'>
