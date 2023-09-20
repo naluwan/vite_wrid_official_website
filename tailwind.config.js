@@ -84,6 +84,9 @@ module.exports = {
         openImagesContainer: 'openImagesContainer 7s ease-in-out',
         openImage: 'openImage 1s ease-in-out',
       },
+      fontFamily: {
+        NotoSerif: ['Noto Serif', 'serif'],
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
