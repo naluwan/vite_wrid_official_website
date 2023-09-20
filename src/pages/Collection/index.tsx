@@ -67,7 +67,7 @@ const Collection: React.FC = () => {
         {/* 回到最上面按鈕 */}
         {scrollTop > 299 && (
           <button
-            className='sticky bottom-4 flex h-6 w-6 items-center justify-center rounded-full bg-black p-6 dark:bg-white'
+            className='sticky bottom-4 left-[100%] flex h-6 w-6 items-center justify-center rounded-full bg-black p-6 dark:bg-white'
             onClick={() =>
               window.scrollTo({
                 top: 0,
