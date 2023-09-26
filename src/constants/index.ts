@@ -182,3 +182,13 @@ export const ceoExp = [
   { year: 2017, content: '任職 帷圓設計 設計師' },
   { year: 2015, content: '任職 萊得爾室內設計 設計師' },
 ];
+
+export const costData = [
+  { title: '客變服務', designCost: '3000元起/坪', workCost: '純設計，無工程費用' },
+  { title: '新成屋', designCost: '5000元起/坪', workCost: '6萬元起/實際施工坪' },
+  { title: '毛胚屋', designCost: '6000元起/坪', workCost: '8萬元起/實際施工坪' },
+  { title: '實品屋', designCost: '6000元起/坪', workCost: '10萬元起/實際施工坪' },
+  { title: '中古屋', designCost: '8000元起/坪', workCost: '12萬元起/實際施工坪' },
+  { title: '辦公空間', designCost: '6000元起/坪', workCost: '10萬元起/實際施工坪' },
+  { title: '商業空間', designCost: '6000元起/坪', workCost: '10萬元起/實際施工坪' },
+];
