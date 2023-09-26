@@ -17,6 +17,7 @@ import {
   LayoutDashboard,
   FileStack,
   MapPin,
+  BadgeDollarSign,
 } from 'lucide-react';
 import { useTheme } from '@/components/ThemeProvider';
 import PopoverPanel from '@/components/PopoverPanel';
@@ -191,6 +192,30 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
                     {/* right text */}
                     <div className='flex-1'>
                       <p className='rightText'>作品欣賞</p>
+                    </div>
+                  </div>
+                  <div className='border-b border-dotted border-black dark:border-white' />
+                </button>
+              </div>
+
+              {/* 收費標準 */}
+              <div className='mb-2'>
+                <button
+                  className='w-full bg-transparent p-0'
+                  onClick={() => {
+                    onSetOpenPanel(false);
+                    go('/cost');
+                  }}
+                >
+                  <div className='hamburgerItem'>
+                    {/* left icon */}
+                    <div className='leftIconDiv'>
+                      <BadgeDollarSign className='leftIcon' />
+                    </div>
+
+                    {/* right text */}
+                    <div className='flex-1'>
+                      <p className='rightText'>收費標準</p>
                     </div>
                   </div>
                   <div className='border-b border-dotted border-black dark:border-white' />
