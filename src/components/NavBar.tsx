@@ -1,6 +1,7 @@
 import React from 'react';
-import navLogoLight from '@/assets/images/navLogoLight.png';
-import navLogoDark from '@/assets/images/navLogoDark.png';
+// import navLogoLight from '@/assets/images/navLogoLight.png';
+// import navLogoDark from '@/assets/images/navLogoDark.png';
+import newLogo from '@/assets/images/newLogo.png';
 import { navLinks } from '@/constants/index';
 import { Link, useNavigate } from 'react-router-dom';
 import { IRef } from 'App';
@@ -47,23 +48,18 @@ const NavBar = React.forwardRef<IRef, NavBarProps>((props, ref) => {
 
   return (
     <header className='absolute top-0 z-50 w-full bg-white dark:bg-black'>
-      <nav className='mt-4 box-border flex h-[60px] max-w-screen-2xl items-center justify-between px-2 lg:mx-auto xl:px-20'>
+      <nav className='mt-4 box-border flex h-[70px] max-w-screen-2xl items-center justify-between px-2 lg:mx-auto xl:px-20'>
         <Link to='/' className='flex items-center'>
-          <img
-            src={theme === 'dark' ? navLogoDark : navLogoLight}
-            alt='logo'
-            width={60}
-            height={60}
-          />
-          <span className='w-[4rem] px-2 text-xl font-bold text-black dark:text-white max-lg:hidden'>
+          <img src={newLogo} alt='logo' width={70} height={70} />
+          {/* <span className='w-[4rem] px-2 text-xl font-bold text-black dark:text-white max-lg:hidden'>
             吾境設計
-          </span>
+          </span> */}
         </Link>
-        <Link to='/' className='flex-1 text-center'>
+        {/* <Link to='/' className='flex-1 text-center'>
           <span className='hidden w-full text-2xl font-bold text-black dark:text-white max-lg:block'>
             吾境設計
           </span>
-        </Link>
+        </Link> */}
         <ul className='flex h-full items-end justify-end gap-12 px-3 max-lg:hidden'>
           {navLinks.map((link: { href: string; label: string }) => (
             <li

@@ -15,7 +15,7 @@ const Home: React.FC = () => {
     <div className='pb-20'>
       {/* 作品展示 */}
       <MaxContainer>
-        <div className='my-5 mb-[60px] grid w-full gap-4 px-4 md:grid-cols-2 lg:grid-cols-4 xl:px-20'>
+        <div className='my-5 grid w-full gap-4 px-4 md:grid-cols-2 lg:grid-cols-4 xl:px-20'>
           {collectionsData.map((item, index) => (
             <Images
               key={item.label}
