@@ -1,4 +1,3 @@
-import MaxContainer from '@/components/MacContainer';
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { collectionsData } from '@/constants';
@@ -97,7 +96,7 @@ const Collections: React.FC = () => {
   });
 
   return (
-    <MaxContainer>
+    <>
       {/* 標籤 */}
       <div className='max-h-max'>
         <div className='mt-5 flex w-full justify-center'>
@@ -180,7 +179,7 @@ const Collections: React.FC = () => {
           autoPlay={false}
         />
       </Modal>
-    </MaxContainer>
+    </>
   );
 };
 

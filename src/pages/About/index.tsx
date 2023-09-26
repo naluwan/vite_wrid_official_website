@@ -9,7 +9,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import MaxContainer from '@/components/MacContainer';
 
 const About: React.FC = () => {
   // 讓畫面回到最上面
@@ -18,7 +17,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <MaxContainer>
+    <>
       {/* 公司簡介 */}
       <div className='w-full'>
         <h1 className='max-w-md:text-3xl py-3 text-center text-2xl font-bold'>
@@ -68,7 +67,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-    </MaxContainer>
+    </>
   );
 };
 

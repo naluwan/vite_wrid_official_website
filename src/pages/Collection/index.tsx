@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { collectionsData } from '@/constants';
 import type { CollectionsDataType } from '@/components/type';
-import MaxContainer from '@/components/MacContainer';
 import Breadcrumb from '@/components/Breadcrumb';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { ArrowUpToLine } from 'lucide-react';
@@ -39,49 +38,43 @@ const Collection: React.FC = () => {
   }, []);
 
   return (
-    <MaxContainer>
-      <div className='relative p-4'>
-        {/* 麵包屑 */}
-        <div className='max-w-screen-2xl lg:mx-auto xl:px-20'>
-          <Breadcrumb
-            collectionLabel={selectedCollection?.label as string}
-            category={selectedCollection?.category as string}
-          />
-        </div>
-        {/* 作品照片 */}
-        <div>
-          {selectedCollection?.images.map((img) => {
-            return (
-              <div className='m-20 max-md:m-0 max-md:py-4' key={img.id}>
-                <AspectRatio ratio={1.5 / 1} className='animate-openImagesContainer'>
-                  <img
-                    src={img.src}
-                    className='h-full w-full object-fill'
-                    alt={img.name}
-                  />
-                </AspectRatio>
-              </div>
-            );
-          })}
-        </div>
-        {/* 回到最上面按鈕 */}
-        {scrollTop > 299 && (
-          <button
-            className='sticky bottom-4 left-[100%] flex h-6 w-6 items-center justify-center rounded-full bg-black p-6 dark:bg-white'
-            onClick={() =>
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              })
-            }
-          >
-            <div>
-              <ArrowUpToLine className='h-8 w-8 text-white dark:text-black' />
-            </div>
-          </button>
-        )}
+    <div className='relative p-4'>
+      {/* 麵包屑 */}
+      <div className='max-w-screen-2xl lg:mx-auto xl:px-20'>
+        <Breadcrumb
+          collectionLabel={selectedCollection?.label as string}
+          category={selectedCollection?.category as string}
+        />
       </div>
-    </MaxContainer>
+      {/* 作品照片 */}
+      <div>
+        {selectedCollection?.images.map((img) => {
+          return (
+            <div className='m-20 max-md:m-0 max-md:py-4' key={img.id}>
+              <AspectRatio ratio={1.5 / 1} className='animate-openImagesContainer'>
+                <img src={img.src} className='h-full w-full object-fill' alt={img.name} />
+              </AspectRatio>
+            </div>
+          );
+        })}
+      </div>
+      {/* 回到最上面按鈕 */}
+      {scrollTop > 299 && (
+        <button
+          className='sticky bottom-4 left-[100%] flex h-6 w-6 items-center justify-center rounded-full bg-black p-6 dark:bg-white'
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            })
+          }
+        >
+          <div>
+            <ArrowUpToLine className='h-8 w-8 text-white dark:text-black' />
+          </div>
+        </button>
+      )}
+    </div>
   );
 };
 

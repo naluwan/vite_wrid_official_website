@@ -14,6 +14,7 @@ import Home from '@/pages/Home';
 import Contact from '@/pages/Contact';
 import Collection from '@/pages/Collection';
 import Cost from '@/pages/Cost';
+import MaxContainer from './components/MacContainer';
 
 export interface IRef {
   getDiv: () => HTMLDivElement;
@@ -40,16 +41,20 @@ const App: React.FC = () => {
   return (
     <main className='relative'>
       <NavBar ref={panelRef} openPanel={openPanel} onSetOpenPanel={setOpenPanel} />
-      <Routes>
-        <Route element={<Home />} path='/' />
-        <Route element={<About />} path='/about' />
-        <Route element={<WorkFlow />} path='/workFlow' />
-        <Route element={<Cost />} path='/cost' />
-        <Route element={<Collections />} path='/collections' />
-        <Route element={<Contact />} path='/contact' />
-        <Route element={<Collection />} path='/:collectionName' />
-        <Route element={<NotFound />} path='*' />
-      </Routes>
+      <MaxContainer>
+        <div className='flex-1'>
+          <Routes>
+            <Route element={<Home />} path='/' />
+            <Route element={<About />} path='/about' />
+            <Route element={<WorkFlow />} path='/workFlow' />
+            <Route element={<Cost />} path='/cost' />
+            <Route element={<Collections />} path='/collections' />
+            <Route element={<Contact />} path='/contact' />
+            <Route element={<Collection />} path='/:collectionName' />
+            <Route element={<NotFound />} path='*' />
+          </Routes>
+        </div>
+      </MaxContainer>
       <Footer />
     </main>
   );
