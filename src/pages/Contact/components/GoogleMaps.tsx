@@ -20,7 +20,7 @@ const GoogleMaps: React.FC = () => {
 
   return (
     <>
-      <GoogleMap zoom={10} center={center} mapContainerClassName='w-full h-full'>
+      <GoogleMap zoom={15} center={center} mapContainerClassName='w-full h-full'>
         <Marker position={center} />
       </GoogleMap>
     </>
