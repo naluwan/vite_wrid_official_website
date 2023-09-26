@@ -1,5 +1,5 @@
 import React from 'react';
-import ceo from '@/assets/images/CEO.jpg';
+import ceo from '@/assets/images/CEO-removebg.png';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 

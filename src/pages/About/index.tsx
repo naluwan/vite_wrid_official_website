@@ -1,7 +1,7 @@
 import React from 'react';
 import { collectionsData, ceoExp } from '@/constants';
 import Slides from '@/components/Slides';
-import ceo from '@/assets/images/CEO.jpg';
+import ceo from '@/assets/images/CEO-removebg.png';
 
 import {
   Accordion,
