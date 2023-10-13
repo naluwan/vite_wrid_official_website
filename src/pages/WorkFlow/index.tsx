@@ -24,7 +24,7 @@ const WorkFlow: React.FC = () => {
       <div className='grid gap-4 lg:grid-cols-4'>
         {/* 詢問需求 */}
         <WorkFlowCard
-          icon={<MessagesSquare className='mr-2 h-28 w-28 text-orange-500/80' />}
+          icon={<MessagesSquare className='mr-2 h-28 w-28 text-black dark:text-white' />}
           title='1.詢問需求'
           content={
             <CardContent className='text-center text-base'>
@@ -35,7 +35,7 @@ const WorkFlow: React.FC = () => {
 
         {/* 現場丈量 */}
         <WorkFlowCard
-          icon={<Ruler className='mr-2 h-28 w-28 text-orange-500/80' />}
+          icon={<Ruler className='mr-2 h-28 w-28 text-black dark:text-white' />}
           title='2.現埸丈量'
           content={
             <CardContent className='text-center text-base'>
@@ -46,7 +46,7 @@ const WorkFlow: React.FC = () => {
 
         {/* 設計提案 */}
         <WorkFlowCard
-          icon={<Lightbulb className='mr-2 h-28 w-28 text-orange-500/80' />}
+          icon={<Lightbulb className='mr-2 h-28 w-28 text-black dark:text-white' />}
           title='3.設計提案'
           content={
             <CardContent className='text-center text-base'>
@@ -57,7 +57,7 @@ const WorkFlow: React.FC = () => {
 
         {/* 設計委任 */}
         <WorkFlowCard
-          icon={<PenSquare className='mr-2 h-28 w-28 text-orange-500/80' />}
+          icon={<PenSquare className='mr-2 h-28 w-28 text-black dark:text-white' />}
           title='4.設計委任'
           content={
             <CardContent className='text-center text-base'>
@@ -76,7 +76,7 @@ const WorkFlow: React.FC = () => {
 
         {/* 圖面繪製 */}
         <WorkFlowCard
-          icon={<PencilRuler className='mr-2 h-28 w-28 text-orange-500/80' />}
+          icon={<PencilRuler className='mr-2 h-28 w-28 text-black dark:text-white' />}
           title='5.圖面繪製'
           content={
             <CardContent className='text-center text-base'>
@@ -87,7 +87,9 @@ const WorkFlow: React.FC = () => {
 
         {/* 工程報價 */}
         <WorkFlowCard
-          icon={<CircleDollarSign className='mr-2 h-28 w-28 text-orange-500/80' />}
+          icon={
+            <CircleDollarSign className='mr-2 h-28 w-28 text-black dark:text-white' />
+          }
           title='6.工程報價'
           content={
             <CardContent className='text-center text-base'>
@@ -99,7 +101,7 @@ const WorkFlow: React.FC = () => {
 
         {/* 工程合約 */}
         <WorkFlowCard
-          icon={<ClipboardCheck className='mr-2 h-28 w-28 text-orange-500/80' />}
+          icon={<ClipboardCheck className='mr-2 h-28 w-28 text-black dark:text-white' />}
           title='7.工程合約'
           content={
             <CardContent className='text-center text-base'>
@@ -120,7 +122,7 @@ const WorkFlow: React.FC = () => {
 
         {/* 完工交屋 */}
         <WorkFlowCard
-          icon={<Home className='mr-2 h-28 w-28 text-orange-500/80' />}
+          icon={<Home className='mr-2 h-28 w-28 text-black dark:text-white' />}
           title='8.完工交屋'
           content={
             <CardContent className='text-center text-base'>
